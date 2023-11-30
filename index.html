@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +27,7 @@
         h1, p {
             text-align: center;
         }
+
     </style>
 </head>
 
@@ -34,7 +37,15 @@
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
      <button id="boton" class="btn btn-danger">Haz click</button>
     </div>
+<h2>Una pregunta</h2>
 
+<p>¿Sabes cuántos talleres hay en el edificio Ex-Artes?</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">A ver dime</button>
+
+<p id="demo"></p>
 
 <script>
     function cambiar(){
@@ -43,32 +54,15 @@
         document.getElementById("boton").onclick = function(){
             cambiar();
         }
-</script>
-</body>
-</html>
-
-<body>
-
-<h2>JavaScript Validation</h2>
-
-<p>Please input a number between 1 and 10:</p>
-
-<input id="numb">
-
-<button type="button" onclick="myFunction()">Submit</button>
-
-<p id="demo"></p>
-
-<script>
 function myFunction() {
   // Get the value of the input field with id="numb"
   let x = document.getElementById("numb").value;
-  // If x is Not a Number or less than one or greater than 10
+ 
   let text;
   if (isNaN(x) || x < 5.5 || x > 6.5) {
-    text = "Input not valid";
+    text = "Noup";
   } else {
-    text = "Input OK";
+    text = "Correcto!!";
   }
   document.getElementById("demo").innerHTML = text;
 }
