@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explora LC</title>
-    <style type="text/css">
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -28,45 +26,43 @@
             text-align: center;
         }
 
+        .btn {
+            margin-top: 20px;
+        }
     </style>
 </head>
-
 <body>
     <div id='contenedor'>
         <h1>BIENVENIDOS :)</h1>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-     <button id="boton" class="btn btn-danger">Haz click</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button id="boton" class="btn btn-danger">Haz clic</button>
     </div>
-<h2>Una pregunta</h2>
 
-<p>¿Sabes cuántos talleres hay en el edificio Ex-Artes?</p>
+    <script>
+        var contadorPantallas = 0;
+        var contenidoPantallas = [
+            "<h2>Pantalla 1</h2><p>Contenido de la pantalla 1.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Pantalla 2</h2><p>Contenido de la pantalla 2.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Pantalla 3</h2><p>Contenido de la pantalla 2.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Pantalla 4</h2><p>Contenido de la pantalla 2.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Pantalla 5</h2><p>Contenido de la pantalla 2.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Pantalla 6</h2><p>Contenido de la pantalla 2.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Pantalla 7</h2><p>Contenido de la pantalla 2.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+          
+        ];
 
-<input id="numb">
+        document.getElementById("boton").onclick = function () {
+            cambiarContenido();
+        };
 
-<button type="button" onclick="myFunction()">A ver dime</button>
-
-<p id="demo"></p>
-
-<script>
-    function cambiar(){
-        document.getElementById("contenedor").innerHTML = "Holaaa";
-    }
-        document.getElementById("boton").onclick = function(){
-            cambiar();
+        function cambiarContenido() {
+            if (contadorPantallas < contenidoPantallas.length) {
+                document.getElementById("contenedor").innerHTML = contenidoPantallas[contadorPantallas];
+                contadorPantallas++;
+            } else {
+                alert("Ya no hay más pantallas disponibles.");
+            }
         }
-function myFunction() {
-  // Get the value of the input field with id="numb"
-  let x = document.getElementById("numb").value;
- 
-  let text;
-  if (isNaN(x) || x < 5.5 || x > 6.5) {
-    text = "Noup";
-  } else {
-    text = "Correcto!!";
-  }
-  document.getElementById("demo").innerHTML = text;
-}
-</script>
-
+    </script>
 </body>
-</html> 
+</html>
