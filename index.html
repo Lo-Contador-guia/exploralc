@@ -29,6 +29,12 @@
         .btn {
             margin-top: 20px;
         }
+
+         .btn-siguiente {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -40,39 +46,39 @@
     <script>
         var contadorPantallas = 0;
         var contenidoPantallas = [
-            "<h2>Acompáñanos en esta travesía</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Ahora te encuentras en una antigua hacienda del siglo XVIII</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Lo Contador ha pasado por distintos dueños, inclusive ha cumplido con distintas funciones. En sus inicios fue construido como regalo de Francisco Antonio Avaria para su sobrina Mercedes Contador, como dote de matrimonio.</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Un tiempo también estuvo funcionando como hospital por la guerra del pacífico y como centro para ejercitos espirituales en otra ocasión.</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¿Sabías que es sede de la Facultad de Arquitectura, Diseño y Estudios Urbanos desde 1958?</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Comencemos el recorrido</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Mapa</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Patio de los naranjos</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Contexto</h2><p>El patio de los naranjos en sus inicios era una ampliación de la casona. Se construyó con la finalidad de la realización de ejercicios espirituales. Este era más conocido como Casa de Ejercitación San Rafael. Donde se levantó una capilla, refectorio y espacio habitacional para los ejercitantes.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Contexto</h2><p>Se dice que por un periodo también circulaba ganado en ese sector y para apaciguar el olor, se plantaron naranjos.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¿Sabes qué sucede si sacas o comes una naranja de este lugar?</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¡Correcto!</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¡Precausión con el patio de los naranjos!</h2><p>También puedes encontrar a estudiantes principalmente de arquitectura y planificación urbana, surmiendo y sufriendo por todas las entregas que tienen.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Patio de los naranjos</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¡¡¡Sigamos con el recorrido de lugares iconic!!!</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Mapa</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Ex-Artes</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Artes en Lo Contador</h2><p>Tras la adquisición del fundo Lo Contador en 1958, la facultad de Arquitectura se trasladó al nuevo campus, con el objetivo de mejorar sus instalaciones. En 196a, la Escuela de Artes también es trasladada a este sector ya que dependía administrativamente de la facultad de Arquitectura.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Artes en Lo Contador</h2><p>Pero tras la adquisición del convento de las religiosas de los Sagrados Corazones (campus Oriente) en 1971, se optó por trasladar paulativamente la facultad de artes a Oriente, proceso que finalizó en 2004.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¿Sabes cuántos talleres hay en el edificio Ex-Artes?</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Intenta de nuevo</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¿Sabes cuántos talleres hay en el edificio Ex-Artes?</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¡Correcto!</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Talleres</h2><p>En el edificio Ex-Artes encontrarás una variedad de talleres para especializarte y profundizar tus conocimientos, entre ellos:<ul><li>Taller de herramientas</li><li>Taller de fotografía</li><li>Taller de iluminación</li><li>Taller de biomateriales</li><li>Taller textil</li><li>FABLAB (innovación y fabricación digital)</li></ul></p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Ex-Artes</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Edificio de diseño</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¿Qué tan reciente es diseño?</h2><p>Las primeras aproximaciones en la UC se remontan a 1974 bajo la formación de la Escuela de Decoración de Interiores al alero del Instituto Femenino de Estudios Superiores. Luego del traslado de la facultad de Artes a Lo Contador, se iniciaron reformas en la enseñanza de las artes. Luis Moreno, docente de la escuela desde 1960 recomendaba una docencia más amplia, capaz de abarcar todos los ámbitos del diseño. Así, dado el gran interés de los estudiantes, a partir de 1967 se hizo necesaria la introducción efectiva de la disciplina del Diseño.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¿En qué lugar se encuentra la sala Luis Moreno!</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¡Correcto!</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>¿Cómo aprovechar al máximo la carrera?</h2><p>¡No todo es taller! Destinar tiempo para la recreación te puede ayudar a fortalecer lazos de comunidad durante todos tus años de carrera.</p><p>Relajate y participa de las iniciativas de los centros de estudiantes de diseño y arquitectura, a fines de cada semeste organizan fiestas temáticas para que liberes toda tu creatividad.</p><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Edificio de diseño</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Niveles superados</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
-            "<h2>Estos son algunos de los lugares más iconic de LC, ¡te invitamos a seguir conociéndolo!</h2><button class='btn btn-primary' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Acompáñanos en esta travesía</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Ahora te encuentras en una antigua hacienda del siglo XVIII</h2><button class='btn btn-primary btn-siguiente'  onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Lo Contador ha pasado por distintos dueños, inclusive ha cumplido con distintas funciones. En sus inicios fue construido como regalo de Francisco Antonio Avaria para su sobrina Mercedes Contador, como dote de matrimonio.</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Un tiempo también estuvo funcionando como hospital por la guerra del pacífico y como centro para ejercitos espirituales en otra ocasión.</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¿Sabías que es sede de la Facultad de Arquitectura, Diseño y Estudios Urbanos desde 1958?</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Comencemos el recorrido</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Mapa</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Patio de los naranjos</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Contexto</h2><p>El patio de los naranjos en sus inicios era una ampliación de la casona. Se construyó con la finalidad de la realización de ejercicios espirituales. Este era más conocido como Casa de Ejercitación San Rafael. Donde se levantó una capilla, refectorio y espacio habitacional para los ejercitantes.</p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Contexto</h2><p>Se dice que por un periodo también circulaba ganado en ese sector y para apaciguar el olor, se plantaron naranjos.</p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¿Sabes qué sucede si sacas o comes una naranja de este lugar?</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¡Correcto!</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¡Precausión con el patio de los naranjos!</h2><p>También puedes encontrar a estudiantes principalmente de arquitectura y planificación urbana, surmiendo y sufriendo por todas las entregas que tienen.</p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Patio de los naranjos</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¡¡¡Sigamos con el recorrido de lugares iconic!!!</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Mapa</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Ex-Artes</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Artes en Lo Contador</h2><p>Tras la adquisición del fundo Lo Contador en 1958, la facultad de Arquitectura se trasladó al nuevo campus, con el objetivo de mejorar sus instalaciones. En 196a, la Escuela de Artes también es trasladada a este sector ya que dependía administrativamente de la facultad de Arquitectura.</p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Artes en Lo Contador</h2><p>Pero tras la adquisición del convento de las religiosas de los Sagrados Corazones (campus Oriente) en 1971, se optó por trasladar paulativamente la facultad de artes a Oriente, proceso que finalizó en 2004.</p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¿Sabes cuántos talleres hay en el edificio Ex-Artes?</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Intenta de nuevo</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¿Sabes cuántos talleres hay en el edificio Ex-Artes?</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¡Correcto!</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Talleres</h2><p>En el edificio Ex-Artes encontrarás una variedad de talleres para especializarte y profundizar tus conocimientos, entre ellos:<ul><li>Taller de herramientas</li><li>Taller de fotografía</li><li>Taller de iluminación</li><li>Taller de biomateriales</li><li>Taller textil</li><li>FABLAB (innovación y fabricación digital)</li></ul></p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Ex-Artes</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Edificio de diseño</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¿Qué tan reciente es diseño?</h2><p>Las primeras aproximaciones en la UC se remontan a 1974 bajo la formación de la Escuela de Decoración de Interiores al alero del Instituto Femenino de Estudios Superiores. Luego del traslado de la facultad de Artes a Lo Contador, se iniciaron reformas en la enseñanza de las artes. Luis Moreno, docente de la escuela desde 1960 recomendaba una docencia más amplia, capaz de abarcar todos los ámbitos del diseño. Así, dado el gran interés de los estudiantes, a partir de 1967 se hizo necesaria la introducción efectiva de la disciplina del Diseño.</p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¿En qué lugar se encuentra la sala Luis Moreno!</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¡Correcto!</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>¿Cómo aprovechar al máximo la carrera?</h2><p>¡No todo es taller! Destinar tiempo para la recreación te puede ayudar a fortalecer lazos de comunidad durante todos tus años de carrera.</p><p>Relajate y participa de las iniciativas de los centros de estudiantes de diseño y arquitectura, a fines de cada semeste organizan fiestas temáticas para que liberes toda tu creatividad.</p><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Edificio de diseño</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Niveles superados</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>",
+            "<h2>Estos son algunos de los lugares más iconic de LC, ¡te invitamos a seguir conociéndolo!</h2><button class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Fin</button>",
           
         ];
 
@@ -85,7 +91,7 @@
                 document.getElementById("contenedor").innerHTML = contenidoPantallas[contadorPantallas];
                 contadorPantallas++;
             } else {
-                alert("Ya no hay más pantallas disponibles.");
+                alert("La travesía ha terminado");
             }
         }
     </script>
