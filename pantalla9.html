@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora LC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='contenedor'>
+        <div class="text-container">
+       <h2>Estás frente al famoso Patio de los naranjos</h2>
+       <p>El patio de los naranjos en sus inicios era una ampliación de la casona. Se construyó con la finalidad de la realización de ejercicios espirituales. Este era más conocido como Casa de Ejercitación San Rafael. Donde se levantó una capilla, refectorio y espacio habitacional para los ejercitantes.</p>
+         <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>
+    </div>
+    </div>
+    <script>
+        document.getElementById("boton").onclick = function () {
+            window.location.href = "pantalla10.html"; // Cambia a la URL de la siguiente pantalla
+        };
+    </script>
+</body>
+</html>

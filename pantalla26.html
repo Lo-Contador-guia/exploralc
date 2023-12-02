@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora LC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='contenedor'>
+        <div class="text-container">
+       <h2>Si estás en el lugar correcto, deberías poder completar lo que falta en esta imagen</h2> 
+       <h3> Memorial de persona que murió por caerse del Ex-Artes</h3> 
+       <p>RESPUESTA: Robinson Valdivia Carlo </p>
+          <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>
+    </div>
+    </div>
+    <script>
+        document.getElementById("boton").onclick = function () {
+            window.location.href = "pantalla27.html"; // Cambia a la URL de la siguiente pantalla
+        };
+    </script>
+</body>
+</html>

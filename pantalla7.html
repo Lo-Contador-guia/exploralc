@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora LC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='contenedor'>
+        <div class="text-container">
+        <h2>Si llegaste al lugar correcto, deberías poder completar la siguiente frase</h2> 
+        <h3> Ya que soy todo tuyo, Oh Madre de...</h3> 
+        <p>RESPUESTA: bondad </p>
+              <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>
+    </div>
+    </div>
+<script>
+        document.getElementById("boton").onclick = function () {
+            window.location.href = "pantalla8.html"; // Cambia a la URL de la siguiente pantalla
+        };
+    </script>
+</body>
+</html>
