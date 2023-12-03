@@ -3,12 +3,18 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: black;
+            background: #1f2023;
             display: flex;
-            flex-direction: column;
-           
+            flex-direction: column; 
             justify-content: center;
             height: 100vh;
+        }
+
+
+        @font-face {
+            font-family: 'font';
+            src: url('font/Caprasimo.ttf');
+            font-display: swap;
         }
 
         #contenedor {
@@ -23,9 +29,9 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            color: whitesmoke;
             margin-top: 20px; /* Ajusta el espacio entre la imagen y el texto */
         }
+
 
 
 
@@ -36,11 +42,18 @@
             margin: 20px ; /* Ajusta el espacio debajo de la imagen */
         }
 
+         h1, h2, h3{
+             font-family: 'font';
+
+         }
+
         h1, h2, h3, p, label {
             text-align: center;
-            color: whitesmoke;
+            color: white;
             margin-bottom: 20px;
+    
         }
+
 
         .btn, input {
             margin-top: 30px;
@@ -49,7 +62,7 @@
             text-align: center;
             font-size: 16px;
             margin: 4px 2px;
-            background-color: whitesmoke; 
+            background-color: floralwhite; 
             border: none;
         }
 
