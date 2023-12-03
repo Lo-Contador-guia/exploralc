@@ -5,44 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explora LC</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    #contenedor {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    h1, p {
-      text-align: center;
-    }
-
-    .btn {
-      margin-top: 20px;
-    }
-  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ <div id='contenedor'>
+        <div class="text-container">
   <h2>Si estás en el lugar correcto, deberías poder completar lo que falta en esta imagen</h2>
 
 
   <form>
-    <label for="password">Memorial de persona que murió por caerse del Ex-Artes</label>
+    <label for="password"></label>
     <input type="text" id="password" oninput="updatePasswordVisibility()" required>
-    <button type="button" onclick="passwordVerifier()">Contestar</button>
+    <button type="button" class="btn btn-primary" onclick="passwordVerifier()">Contestar</button>
   </form>
+ </div>
+    </div>
 
   <p id="result"></p>
 
