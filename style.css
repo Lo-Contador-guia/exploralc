@@ -5,7 +5,8 @@
             box-sizing: border-box;
             background: black;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+           
             justify-content: center;
             height: 100vh;
         }
@@ -16,7 +17,7 @@
             padding: 30px;
         }
 
-        .text-container {
+        .text-container, form {
 
             display: flex;
             flex-direction: column;
@@ -26,19 +27,29 @@
             margin-top: 20px; /* Ajusta el espacio entre la imagen y el texto */
         }
 
+
+
         img {
+
             max-width: 150px;
             height: auto; /* Para mantener la proporción original */
-            margin-bottom: 20px; /* Ajusta el espacio debajo de la imagen */
+            margin: 20px ; /* Ajusta el espacio debajo de la imagen */
         }
 
         h1, h2, h3, p, label {
             text-align: center;
             color: whitesmoke;
+            margin-bottom: 20px;
         }
 
-        .btn {
-            margin-top: 20px;
+        .btn, input {
+            margin-top: 30px;
+            color: black;
+            padding: 10px 10px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            background-color: floralwhite; 
         }
 
          .btn-siguiente {
@@ -46,11 +57,4 @@
             bottom: 20px;
             right: 20px;
         }
-
-        #boton-anterior {
-         position: fixed;
-     bottom: 20px;
-      left: 20px;
-        }
-
         
