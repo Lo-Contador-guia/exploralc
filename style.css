@@ -49,22 +49,20 @@
             margin: 20px ; /* Ajusta el espacio debajo de la imagen */
         }
 
-        h1, h2 {
-
-            font-family: 'titulo';
-             font-weight: normal;
-
-        }
-
-        h3, p, label, .btn {
-            font-family: 'texto';
-             font-weight: normal;
-
-        }
-
-
-        h1, h2, h3, p, label {
+        h1 {
             text-align: center;
+            font-family: 'titulo';
+            font-weight: normal;
+            color: white; 
+            margin-bottom: 0px;
+            font-size: 45px;
+
+        }
+
+        h2, h3, p, label {
+            text-align: center;
+            font-family: 'texto';
+            font-weight: normal;
             color: white;
             margin-bottom: 20px;
     
@@ -72,10 +70,11 @@
 
 
         .btn, input {
-            margin-top: 30px;
+            margin-top: 70px;
             color: black;
             padding: 10px 10px;
             text-align: center;
+            font-family: 'titulo';
             font-size: 16px;
             margin: 4px 2px;
             background-color: white; 
