@@ -12,8 +12,8 @@
 
   <div id='contenedor'>
         <div class="text-container">
-
-  <h2>Si llegaste al lugar correcto, deberías poder completar la siguiente frase</h2>
+          <h1>Si llegaste al lugar correcto,</h1>
+  <h2> deberías poder completar la siguiente frase</h2>
 
 
   <form>
@@ -24,7 +24,9 @@
   <p id="result"></p>
  </div>
     </div>
-  
+
+
+
   <script>
     function passwordVerifier() {
       const passwordInput = document.getElementById('password');
@@ -34,7 +36,7 @@
         window.location.href = 'pantalla8.html';
       } else {
         const resultMessage = document.getElementById('result');
-        resultMessage.textContent = 'Noup, Intentalo denuevo!';
+        resultMessage.textContent = 'Noup, inténtalo de nuevo';
       }
     }
 
