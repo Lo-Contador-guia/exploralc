@@ -12,8 +12,14 @@
 
 
         @font-face {
-            font-family: 'font';
+            font-family: 'titulo';
             src: url('font/Caprasimo.ttf');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'texto';
+            src: url('font/CenturyGothic.ttf');
             font-display: swap;
         }
 
@@ -42,10 +48,19 @@
             margin: 20px ; /* Ajusta el espacio debajo de la imagen */
         }
 
-         h1, h2, h3{
-             font-family: 'font';
+        h1 {
 
-         }
+            font-family: 'titulo';
+             font-weight: normal;
+
+        }
+
+        h2, h3, p, label, .btn {
+            font-family: 'texto';
+             font-weight: normal;
+
+        }
+
 
         h1, h2, h3, p, label {
             text-align: center;
@@ -62,7 +77,7 @@
             text-align: center;
             font-size: 16px;
             margin: 4px 2px;
-            background-color: floralwhite; 
+            background-color: white; 
             border: none;
         }
 
