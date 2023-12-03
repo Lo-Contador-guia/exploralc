@@ -1,24 +1,73 @@
+<!-- pantalla26.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explora LC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explora LC</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #contenedor {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1, p {
+      text-align: center;
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id='contenedor'>
-        <div class="text-container">
-       <h2>Si estás en el lugar correcto, deberías poder completar lo que falta en esta imagen</h2> 
-       <h3> Memorial de persona que murió por caerse del Ex-Artes</h3> 
-       <p>RESPUESTA: Robinson Valdivia Carlo </p>
-          <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>
-    </div>
-    </div>
-    <script>
-        document.getElementById("boton").onclick = function () {
-            window.location.href = "pantalla27.html"; // Cambia a la URL de la siguiente pantalla
-        };
-    </script>
+
+  <h2>Si estás en el lugar correcto, deberías poder completar lo que falta en esta imagen</h2>
+
+
+  <form>
+    <label for="password">Memorial de persona que murió por caerse del Ex-Artes</label>
+    <input type="text" id="password" oninput="updatePasswordVisibility()" required>
+    <button type="button" onclick="passwordVerifier()">Contestar</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function passwordVerifier() {
+      const passwordInput = document.getElementById('password');
+      const password = passwordInput.value;
+
+      if (password === 'Robinson Valdivia Carlo') {
+        window.location.href = 'pantalla27.html';
+      } else {
+        const resultMessage = document.getElementById('result');
+        resultMessage.textContent = 'Noup, Intentalo denuevo!';
+      }
+    }
+
+    function updatePasswordVisibility() {
+      const passwordInput = document.getElementById('password');
+      passwordInput.type = 'text';
+      passwordInput.addEventListener('blur', function onBlur() {
+        passwordInput.type = 'password';
+        passwordInput.removeEventListener('blur', onBlur);
+      });
+    }
+  </script>
+
 </body>
 </html>
