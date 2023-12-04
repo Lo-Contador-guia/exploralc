@@ -59,7 +59,7 @@
 
         }
 
-        h2, h3, p, label {
+        h2, h3, p, label, ul {
             text-align: center;
             font-family: 'texto';
             font-weight: normal;
