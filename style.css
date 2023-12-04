@@ -47,7 +47,6 @@
             max-width: 150px;
             height: auto; /* Para mantener la proporción original */
             margin: 20px ; /* Ajusta el espacio debajo de la imagen */
-            display:inline-block; /* Imágenes en una misma línea */
         }
 
         h1 {
@@ -65,7 +64,7 @@
             font-family: 'texto';
             font-weight: normal;
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
     
         }
 
@@ -87,4 +86,10 @@
             bottom: 20px;
             right: 20px;
         }
+
+        .image-container {
+        display: flex;
+        justify-content: space-around; /* Ajusta el espacio entre las imágenes */
+         margin-top: 20px;
+        }   
         
