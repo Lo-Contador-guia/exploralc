@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!--pagina de secuencia-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explora LC</title>
+    <title>Explora LC</title> <!--titulo general-->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,12 +12,12 @@
         <div class="text-container">
         <h1>Si estás en el lugar correcto,</h1>
        <h2> adéntrate en el entrecruce de los caminos.</h2> 
-       <p>Mira a través de uno de ellos y podrás ver un refugio de aves. Acércate a la más cercana.</p>
-          <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>
+       <p>Mira a través de uno de ellos y podrás ver un refugio de aves. Acércate a la más cercana.</p> <!--texto explicativo-->
+          <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button> <!--botón de acción-->
     </div>
     </div>
     <script>
-        document.getElementById("boton").onclick = function () {
+        document.getElementById("boton").onclick = function () { <!--función del boton-->
             window.location.href = "pantalla15.html"; // Cambia a la URL de la siguiente pantalla
         };
     </script>
