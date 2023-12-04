@@ -1,23 +1,25 @@
 <!-- pantalla15.html -->
 <!DOCTYPE html>
+<!--pagina de pregunta-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explora LC</title>
+  <title>Explora LC</title> <!--titulo general -->
+
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
  <div id='contenedor'>
         <div class="text-container">
-  <h1>Ahora, responde</h1>
+  <h1>Ahora, responde</h1> <!--introducción a la pregunta -->
 
 
   <form>
-    <label for="password">¿De qué color es el refugio de las aves?</label>
-    <input type="text" id="password" oninput="updatePasswordVisibility()" required>
-    <button type="button" class="btn btn-primary" onclick="passwordVerifier()">Contestar</button>
+    <label for="password">¿De qué color es el refugio de las aves?</label> <!--pregunta -->
+    <input type="text" id="password" oninput="updatePasswordVisibility()" required> <!--poder ver el texto escrito-->
+    <button type="button" class="btn btn-primary" onclick="passwordVerifier()">Contestar</button> <!--boton para realizar la acción-->
   </form>
     <p id="result"></p>
   </div>
@@ -30,20 +32,20 @@
       const passwordInput = document.getElementById('password');
       const password = passwordInput.value;
 
-      if (password === 'rojo') {
-        window.location.href = 'pantalla16.html';
+      if (password === 'rojo') { <!--respuesta correcta a la pregunta-->
+        window.location.href = 'pantalla16.html'; <!--continuación de las paginas-->
       } else {
         const resultMessage = document.getElementById('result');
-        resultMessage.textContent = 'Noup, inténtalo de nuevo';
-      }
+        resultMessage.textContent = 'Noup, inténtalo de nuevo'; <!--respuesta en caso de una respuesta incorrecta-->
+      } <!--acciones a realizar según respuesta-->
     }
 
     function updatePasswordVisibility() {
-      const passwordInput = document.getElementById('password');
+      const passwordInput = document.getElementById('password'); <!--https://www.w3schools.com/jsref/prop_password_value.asp-->
       passwordInput.type = 'text';
       passwordInput.addEventListener('blur', function onBlur() {
         passwordInput.type = 'password';
-        passwordInput.removeEventListener('blur', onBlur);
+        passwordInput.removeEventListener('blur', onBlur); <!--https://www.w3schools.com/jsref/event_onblur.asp-->
       });
     }
   </script>
