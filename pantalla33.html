@@ -12,7 +12,7 @@
  <div id='contenedor'>
         <div class="text-container">
 
-  <h2>Si llegaste al lugar correcto, responde</h2>
+  <h1>Si llegaste al lugar correcto, responde</h1>
   <form>
     <label for="password">Entre los tres círculos de hadas en el suelo, menciona la figura geométrica diferente</label> <!--pregunta-->
     <input type="text" id="password" oninput="updatePasswordVisibility()" required> <!--poder ver el texto escrito-->
@@ -32,7 +32,7 @@
         window.location.href = 'pantalla34.html'; <!--continuación de las paginas-->
       } else {
         const resultMessage = document.getElementById('result');
-        resultMessage.textContent = 'Noup, Intentalo denuevo!'; <!--respuesta en caso de una respuesta incorrecta-->
+        resultMessage.textContent = 'Noup, inténtalo de nuevo'; <!--respuesta en caso de una respuesta incorrecta-->
       }
     }
 
