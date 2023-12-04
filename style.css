@@ -47,6 +47,7 @@
             max-width: 150px;
             height: auto; /* Para mantener la proporción original */
             margin: 20px ; /* Ajusta el espacio debajo de la imagen */
+            display:inline-block; /* Imágenes en una misma línea */
         }
 
         h1 {
