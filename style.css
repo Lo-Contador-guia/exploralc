@@ -90,6 +90,6 @@
         .image-container {
         display: flex;
         justify-content: space-around; /* Ajusta el espacio entre las imágenes */
-         margin-top: 20px;
+         margin: 0px;
         }   
         
