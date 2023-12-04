@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+<!--pagina de secuencia-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explora LC</title>
+    <title>Explora LC</title> <!--titulo general-->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id='contenedor'>
         <div class="text-container">
-       <h2>Recibe tu humilde premio, esperamos que hayas disfrutado esta travesía por el campus lo contador. Ahora, descansa en el pasto.</h2>
-           <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>
+       <h2>Recibe tu humilde premio, esperamos que hayas disfrutado esta travesía por el campus lo contador. Ahora, descansa en el pasto.</h2> <!--texto explicativo-->
+           <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button> <!--botón de acción-->
     </div>
     </div>
     <script>
-        document.getElementById("boton").onclick = function () {
+        document.getElementById("boton").onclick = function () { <!--función del boton-->
             window.location.href = "pantalla36.html"; // Cambia a la URL de la siguiente pantalla
         };
     </script>
