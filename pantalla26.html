@@ -10,9 +10,8 @@
 <body>
  <div id='contenedor'>
         <div class="text-container">
-  <h2>Si estás en el lugar correcto, deberías poder completar lo que falta en esta imagen</h2>
-
-
+  <h1>Si estás en el lugar correcto,</h1>
+  <h2>deberías poder completar lo que falta en esta imagen</h2>
   <form>
     <label for="password"></label>
     <input type="text" id="password" oninput="updatePasswordVisibility()" required>
@@ -21,8 +20,6 @@
     <p id="result"></p>
  </div>
     </div>
-
-
 
   <script>
     function passwordVerifier() {
@@ -33,7 +30,7 @@
         window.location.href = 'pantalla27.html';
       } else {
         const resultMessage = document.getElementById('result');
-        resultMessage.textContent = 'Noup, Intentalo denuevo!';
+        resultMessage.textContent = 'Noup, inténtalo de nuevo';
       }
     }
 
@@ -49,3 +46,4 @@
 
 </body>
 </html>
+
