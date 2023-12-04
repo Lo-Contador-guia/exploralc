@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--pagina de secuencia-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,12 +11,12 @@
     <div id='contenedor'>
         <div class="text-container">
        <h1>Estás frente al famoso Patio de los naranjos</h1>
-       <p>El patio de los naranjos en sus inicios era una ampliación de la casona. Se construyó con la finalidad de la realización de ejercicios espirituales. Este era más conocido como Casa de Ejercitación San Rafael. Donde se levantó una capilla, refectorio y espacio habitacional para los ejercitantes.</p>
-         <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button>
+       <p>El patio de los naranjos en sus inicios era una ampliación de la casona. Se construyó con la finalidad de la realización de ejercicios espirituales. Este era más conocido como Casa de Ejercitación San Rafael. Donde se levantó una capilla, refectorio y espacio habitacional para los ejercitantes.</p> <!--texto explicativo-->
+         <button id="boton" class='btn btn-primary btn-siguiente' onclick='cambiarContenido()'>Siguiente</button> <!--botón de acción-->
     </div>
     </div>
     <script>
-        document.getElementById("boton").onclick = function () {
+        document.getElementById("boton").onclick = function () { <!--función del boton-->
             window.location.href = "pantalla10.html"; // Cambia a la URL de la siguiente pantalla
         };
     </script>
